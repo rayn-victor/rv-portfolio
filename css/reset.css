@@ -1,0 +1,10 @@
+html, header, footer, body, section, div, span, object, h1, h2, h3, h4, h5, h6, p, ul, li, a, form, input, label, table, menu {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    list-style: none;
+}
