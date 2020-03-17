@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #777;
+    font-family: 'Staatliches', 'Red Hat Display', 'Gill Sans', sans-serif;
+}
+
+body {
+    background-color: #333;
+    border: solid white 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainCon {
+    margin-top: 90px;
+}
+
+#heroCon {
+    background-color: #888;
+    height: 400px;
+    width: 400px;
+    border-radius: 1%;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+nav ul li {
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 100px;
+    margin: 15px;
+    transition-duration: .7s;
+}
+
+nav ul li:hover {
+    transform: scale(1.2);
+}
