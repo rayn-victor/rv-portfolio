@@ -1,6 +1,6 @@
 # Rayn Victor Portfolio Page
-![logo](https://user-images.githubusercontent.com/43250423/76874330-6aad5d00-6845-11ea-98ae-080463a42187.png)
->"apprendre les règles comme un pro pour pouvoir les enfreindre comme un artiste"
+![logo](https://user-images.githubusercontent.com/43250423/76877282-89155780-6849-11ea-808e-0fca69f34794.png)
+>"apprendre les règles comme un pro pour pouvoir les enfreindre comme un artiste" - Pablo Picasso
 
 ### Description
 A personal portfolio app showcasing all of my motion, graphics, photography work including case studies and a contact page.
