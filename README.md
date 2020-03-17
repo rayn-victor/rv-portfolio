@@ -1,5 +1,5 @@
 # Rayn Victor Portfolio Page
-![logo](https://user-images.githubusercontent.com/43250423/76877381-b104bb00-6849-11ea-99b9-7c817c68f9fb.png)
+![logo](https://user-images.githubusercontent.com/43250423/76877572-017c1880-684a-11ea-9e8c-ad30b257acfd.jpg)
 >"apprendre les règles comme un pro pour pouvoir les enfreindre comme un artiste" - Pablo Picasso
 
 ### Description
