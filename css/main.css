@@ -1,53 +1,361 @@
 @charset "UTF-8";
 
-.hidden {
-    display: none;
-}
-
-a {
-    text-decoration: none;
-    color: #777;
-    font-family: 'Staatliches', 'Red Hat Display', 'Gill Sans', sans-serif;
-}
+html { background-color: #fff; }
+.hidden { display: none; }
+a { text-decoration: none; color: #777; font-family: 'Staatliches', 'Red Hat Display', 'Gill Sans', sans-serif; user-select: none; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Staatliches', 'Gill Sans', sans-serif; user-select: none;}
+p { font-family: 'Red Hat Display', 'Gill Sans', sans-serif; word-spacing: 1px; user-select: none;}
+.bold { font-weight: bold; font-size: 16px; color: #333; }
+img { user-select: none; }
 
 body {
-    background-color: #333;
-    border: solid white 5px;
     display: flex;
     justify-content: center;
+    background-color: #333;
+}
+
+#bg-video {
+    position: fixed;
+}
+
+#borderCon {
+    height: 120%;
+    width: 98%;
+    position: absolute;
+    border: solid white 5px;
 }
 
 .mainCon {
     margin-top: 90px;
+    margin-bottom: 90px;
+    width: 75%;
+    position: absolute;
 }
 
 #heroCon {
-    background-color: #888;
+    background-color: #fff;    
     height: 400px;
-    width: 400px;
-    border-radius: 1%;
+    width: 100%;
+    border-radius: 0.5%;
+    filter: opacity(0.9);
 }
 
-nav {
-    margin-top: 30px;
+.heroText { padding: 50px; }
+
+.heroText p { color: #555;}
+
+.heroText span { margin-top: 20px; margin-bottom: 20px; }
+
+.heroText h1 { font-size: 40px; }
+
+.homeNav {
+    margin-top: 20px;
 }
 
-nav ul {
+.homeNav ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    font-size: 18px;
 }
 
-nav ul li {
+.homeNav ul li {
     background-color: #fff;
     height: 100px;
-    width: 100px;
-    border-radius: 100%;
+    width: 100%;
+    border-radius: 0.5%;
     text-align: center;
     line-height: 100px;
-    margin: 15px;
     transition-duration: .7s;
 }
 
-nav ul li:hover {
-    transform: scale(1.2);
+.homeNav ul li:hover {
+    transform: scale(1.05);
+}
+
+/* PAGE NAV AND FOOTER */
+
+.mainNav { width: 100%; display: flex; justify-content: space-between; margin: 20px 0 30px 0; }
+
+.mainNav ul { display: flex; }
+
+.mainNav ul li a, #activeLink{
+    color: #777;
+    font-family: 'Red Hat Display', 'Gill Sans', sans-serif;
+    font-size: 14px;
+    transition-duration: 0.3s;
+    padding: 10px;
+    margin: 10px;
+}
+
+#centerNav { display: flex; }
+#icon-home { width: 20px; }
+
+#centerNav a:hover { background-color: #eee; color: #555; }
+#leftNav ul li a:hover, #rightNav a:hover { background-color: #fff; opacity: 0.5; }
+
+#activeLink { 
+    background-color: #eee; 
+    cursor: default; 
+    font-weight: lighter;
+    color: #555;
+    border-radius: 2px;
+}
+
+#leftNav { width: 40px; }
+
+footer { width: 100%; display: flex; justify-content: center; }
+
+#icon-up { width: 20px; margin: 25px; cursor: pointer; filter: opacity(0.5); transition: 0.3s; }
+#icon-up:hover { filter: opacity(1); transform: scale(1.2); }
+
+#leftNav h1, #rightNav { display: none; }
+
+/* PROJECTS PAGE */
+
+.projectCon {
+    width: 100%;
+    /* margin-top: -20px;
+    z-index: 1; */
+    background-color: #fff;
+    /* margin-top: 700px; */
+    /* box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.303); */
+}
+
+.projectList { 
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.project {
+    width: 100%;
+    height: 400px;
+    background-color: #660706;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.projectDesc { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+    color: white;
+}
+
+.project:hover .projectDesc p, .project:hover .projectDesc h2 { animation: appear-up 0.5s ease 1 forwards; }
+@keyframes appear-up {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+.project:hover .projectDesc { 
+    opacity: 1; 
+    background-color: #9a2222ce; 
+}
+
+.projectDesc p { width: 350px; margin: 0 auto; margin-top: 20px; font-size: 16px; }
+.projectDesc h2 { font-size: 24px; }
+
+#project1 {
+    background: url('../images/cover-od.jpg') center no-repeat no-repeat;
+    background-size: cover;
+}
+
+#project2 {
+    background: url('../images/cover-mashup.jpg') center no-repeat no-repeat;
+    background-size: cover;
+}
+
+#project3 {
+    background: url('../images/cover-yao.jpg') center no-repeat no-repeat;
+    background-size: cover;
+}
+
+/* GRAPHICS PAGE */
+
+.graphicsCon {
+    width: 100%;
+    /* margin-top: -20px;
+    z-index: 1; */
+    background-color: #fff;
+    /* margin-top: 700px; */
+    /* box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.303); */
+}
+
+/* ABOUT Page */
+
+.aboutCon {
+    width: 100%;
+    /* margin-top: -20px;
+    z-index: 1; */
+    background-color: #fff;
+    /* margin-top: 700px; */
+    /* box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.303); */
+}
+
+/* CONTACT Page */
+
+.contactCon {
+    width: 100%;
+    /* margin-top: -20px;
+    z-index: 1; */
+    background-color: #fff;
+    /* margin-top: 700px; */
+    /* box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.303); */
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Red Hat Display', 'Gill Sans', sans-serif;
+}
+
+form { margin: 20px; width: 500px; }
+
+.contactCon p { font-size: 16px; color: #999; margin-top: 10px; }
+#formTitle { margin-top: 20px; font-size: 26px; color: #333;}
+
+label { margin-top: 20px; color: #333; font-size: 14px;}
+
+input, textarea { 
+    padding: 12px; 
+    margin-top: 5px; 
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+    border: solid #999 1px;
+}
+
+input::placeholder, textarea::placeholder { color: #ccc; }
+
+#messagebox { height: 100px; }
+
+#submit { 
+    width: 150px; 
+    background-color: rgb(223, 223, 223); 
+    color: rgb(96, 96, 96);
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#submit:hover { transform: scale(0.95); color: #660706;}
+
+.socialMediaCon {
+    width: 300px;
+    border-radius: 3px;
+    display: flex;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.socialMediaCon ul { margin-top: 10px; }
+.socialMediaCon ul li { display: flex; margin: 20px; margin-bottom: 0;}
+.socialMediaCon ul li a { 
+    margin-left: 45px; 
+    cursor: pointer; 
+    font-family: 'Red Hat Display', 'Gill Sans', sans-serif; 
+    position: absolute; 
+}
+.socialMediaCon ul li a:hover { border-bottom: solid 2px #999; }
+
+#icon-sm { width: 25px; height: 20px; }
+
+#contactDivider { display: none; }
+
+
+/* media queries */
+
+@media screen and (min-width: 600px){
+    .homeNav ul {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 18px;
+    }
+
+    #borderCon {
+        height: 100%;
+        width: 99%;
+    }
+
+    .heroText { padding: 55px; }
+
+}
+
+@media screen and (min-width: 650px) {
+    
+    #logo { width: 150px; margin-bottom: 10px;}
+
+    #leftNav h1 { display: flex; margin: 16px 0 0 20px; font-size: 22px; }
+    #leftNav { width: fit-content; }
+
+}
+
+@media screen and (min-width: 1000px){
+    .mainNav { margin: 30px 0 40px 0; }
+    #leftNav h1 { margin: 16px 0 0 40px;}
+    #rightNav { margin-right: 40px; margin-top: -2px;}
+    
+    .mainCon {
+        margin-top: 160px;
+        margin-bottom: 0;
+    }
+
+    #borderCon {
+        height: 99%;
+        width: 99.2%;
+    }
+
+    .heroText { padding: 40px; width: 40%;}
+
+    #rightNav { display: flex; }
+    #icon-nav { width: 20px; }
+
+    .projectList { grid-template-columns: repeat(2, 1fr); margin: 20px; }
+
+    .contactForm { margin-right: 50px; }
+    .socialMediaCon { width: fit-content; margin: 0; margin: 130px 50px; }
+    .contactSection { display: flex; justify-content: center;}
+    #contactDivider { display: block; background-color: #ccc; width: 1px; height: 400px; margin-top: 100px;}
+    #submit { margin: 20px 0 0 0; }
+}
+
+/* super big media queries */
+
+@media screen and (min-width: 1600px){
+    .mainCon {
+        width: 70%;
+    }
+    
+    .projectDesc p { font-size: 18px; width: 400px; }
+    .projectDesc h2 { font-size: 26px; }
+
+}
+
+@media screen and (min-width: 2300px){
+    #heroCon {
+        height: 600px;
+    }
+
+    .homeNav ul li {
+       height: 200px;
+       line-height: 200px;
+    }
+
+    #borderCon {
+        height: 85%;
+        width: 78%;
+    }
 }
