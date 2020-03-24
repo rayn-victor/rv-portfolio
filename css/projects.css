@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+html { background-color: #fff; }
+.hidden { display: none; }
+a { text-decoration: none; color: #777; font-family: 'Staatliches', 'Red Hat Display', 'Gill Sans', sans-serif; user-select: none; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Staatliches', 'Gill Sans', sans-serif; user-select: none;}
+p { font-family: 'Red Hat Display', 'Gill Sans', sans-serif; word-spacing: 1px; user-select: none;}
+.bold { font-weight: bold; font-size: 16px; color: #333; }
+img { user-select: none; }
+
+.projectHero {
+    width: 100%;
+    height: 850px;
+    background: url("../images/header-life-squared.jpg") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    position: fixed;
+    z-index: 0;
+    /* box-shadow: inset 0 3px 50px rgb(0, 0, 0); */
+}
+
+.projectHeroCon { background-color: #50505064; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;}
+
+#logo { margin-bottom: 20px;}
+
+#icon-down { width: 45px; margin: 0 auto; margin-top: 20px; cursor: pointer; animation: icon-down 1s ease 20;}
+#icon-down:hover { animation-play-state: paused; }
+@keyframes icon-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px);}
+    100% { transform: translateY(0);}
+}
+
+#pageTitle { color: white; font-size: 36px; margin: 20px; }
+#pageSubtitle { color: white; font-size: 20px; margin: 20px; }
+
+footer { width: 100%; display: flex; justify-content: center; }
+
+#icon-up { width: 20px; margin: 25px; cursor: pointer; filter: opacity(0.5); transition: 0.3s; }
+#icon-up:hover { filter: opacity(1); transform: scale(1.2); }
+
+.allProjectsCon {
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    margin-top: 850px;
+    box-shadow: 0px -3px 10px rgba(51, 51, 51, 0.372);
+}
+
+.projectHero a { width: 150px; margin: 0 auto; }
+
+.projectCase #pageTitle { color: #333; margin: 0 auto; }
+
+.nextButton, .prevButton { display: none;}
+.nextButton:hover .hoverText, .prevButton:hover .hoverText { visibility: visible; }
+.nextButton .hoverText { box-shadow: 2px 5px 5px rgba(51, 51, 51, 0.091); width: 150px; transform: translateX(-180px) translateY(-55px); font-family: 'Red Hat Display', 'Gill Sans', sans-serif; visibility: hidden; background-color: #fff; color: #333; text-align: center; padding: 5px; margin: 5px; border-radius: 3px; position: absolute; z-index: 1;}
+.prevButton .hoverText { box-shadow: 2px 5px 5px rgba(51, 51, 51, 0.091); width: 150px; transform: translateX(60px) translateY(-55px); font-family: 'Red Hat Display', 'Gill Sans', sans-serif; visibility: hidden; background-color: #fff; color: #333; text-align: center; padding: 5px; margin: 5px; border-radius: 3px; position: absolute; z-index: 1;}
+
+
+/* PROJECT 1 LIFE SQUARED */
+
+.projectCase { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+ }
+
+.projectCase p { width: 90%; margin: 0 auto; margin-top: 20px; text-align: justify; font-size: 14px; color: #777; }
+
+.od-imgCon { width: 90%; height: 300px; background-color: coral; margin: 0 auto;  margin-top: 20px;}
+
+#od-img1 { background: url('../images/od-mockup-4.jpg') no-repeat center center; background-size: cover; height: 100%; }
+
+.verticleLine { background-color: #ccc; width: 1px; height: 100px; margin: 0 auto; margin-top: 20px;}
+
+.smAdCon { margin: 0 auto; margin-top: 10px; width: 90%; display: grid; justify-items: center; grid-template-columns: repeat(1, 1fr)}
+.smAdCon iframe { border: 0; height: 500px; margin-top: 20px;}
+
+.od-mockups { width: 90%; margin: 0 auto; margin-top: 30px; display: grid; grid-template-columns: repeat(1, 1fr);}
+.od-mockup { width: 100%; height: 400px;}
+#od-mockup1 { background: url('../images/od-mockup-1.jpg') no-repeat center center; background-size: cover;}
+#od-mockup2 { background: url('../images/od-mockup-2.jpg') no-repeat center center; background-size: cover;}
+#od-mockup3 { background: url('../images/od-mockup-3.jpg') no-repeat center center; background-size: cover;}
+#od-mockup4 { background: url('../images/od-mockup-5.jpg') no-repeat center center; background-size: cover;}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px) {
+    .nextButton, .prevButton { display: inline-block; position: relative;}
+    .nextButton a:hover, .prevButton a:hover { transform: scale(0.9); }
+    .nextButton a { position: fixed; right: 0; top: 50%; background-color: #fff; border-radius: 100%; margin-right: 20px; transition: 0.5s;}
+    .prevButton a { position: fixed; left: 0; top: 50%; background-color: #fff; border-radius: 100%; margin-left: 20px; transition: 0.5s;}
+    .nextButton img, .prevButton img { width: 20px; padding: 10px;}
+
+    .smAdCon { grid-template-columns: repeat(2, 1fr); }
+    .od-imgCon { height: 500px; }
+}
+
+@media screen and (min-width: 1000px) {
+    .nextButton a { margin-right: 40px; }
+    .prevButton a { margin-left: 40px; }
+
+    .od-mockups { grid-template-columns: repeat(2, 1fr); width: 70%;}
+    .projectCase p, .od-imgCon, .smAdCon { width: 70%; font-size: 18px; margin-top: 40px;}
+    .verticleLine { margin-top: 40px; }
+}
+
+@media screen and (min-width: 1200px) {
+    .nextButton img, .prevButton img { width: 30px; }
+
+    .smAdCon { display: flex; justify-content: space-between;}
+    .od-imgCon { height: 800px; }
+}

@@ -6,22 +6,29 @@
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display|Staatliches&display=swap" rel="stylesheet">
     <link  rel="stylesheet" href="css/reset.css">
     <link  rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
     <title>Rayn Victor</title>
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+        <source src="images/bg-home.mp4" type="video/mp4">
+    </video>
+    <div id="borderCon"></div>
     <section class="mainCon">
         <section id="heroCon">
-
+            <div class="heroText">
+                <h1>RAYN VICTOR</h1>
+                <p></p>
+            </div>
         </section>
-        <nav>
-            <ul><li><a href="/projects.html">Projects</a></li>
-                <li><a href="/graphics.html">Graphics</a></li>
-                <li><a href="/gallery.html">Gallery</a></li>
-                <li><a href="/stories.html">Stories</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li></ul>
+        <nav class="homeNav">
+            <ul><li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li></ul>
         </nav>
     </section>
+
+    <!-- <img src="https://unsplash.it/1000/1000?random=" /> -->
 
     <script src="js/main.js"></script>
 </body>
