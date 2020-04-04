@@ -93,7 +93,8 @@ footer { width: 100%; display: flex; justify-content: center; }
 
 #bxw-img1 { background: url('../images/magazine-ad.jpg') no-repeat center center; background-size: cover; height: 100%; }
 
-#wine-label-1, #wine-label-2, #bottle-model { height: 100%; margin-top: 40px;}
+#wine-label-1, #wine-label-2 { height: 100%; margin-top: 40px;}
+#bottle-model  { height: 350px; width: 290px;}
 
 .hugeX { width: 100%; }
 .hugeX p { text-align: center; font-size: 40px;}
