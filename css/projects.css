@@ -11,19 +11,17 @@ img { user-select: none; }
 .projectHero {
     width: 100%;
     height: 850px;
-    background: url("../images/header-life-squared.jpg") no-repeat center center fixed;
-    background-size: cover;
     text-align: center;
     position: fixed;
-    z-index: 0;
-    /* box-shadow: inset 0 3px 50px rgb(0, 0, 0); */
+    z-index: -1;
+    margin-top: -850px;
 }
 
 .projectHeroCon { background-color: #50505064; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;}
 
 #logo { margin-bottom: 20px;}
 
-#icon-down { width: 45px; margin: 0 auto; margin-top: 20px; cursor: pointer; animation: icon-down 1s ease 20;}
+#icon-down { width: 45px; margin: 0 auto; margin-top: 20px; cursor: pointer; animation: icon-down 1s ease 50;}
 #icon-down:hover { animation-play-state: paused; }
 @keyframes icon-down {
     0% { transform: translateY(0); }
@@ -41,11 +39,12 @@ footer { width: 100%; display: flex; justify-content: center; }
 
 .allProjectsCon {
     width: 100%;
-    z-index: 1;
+    z-index: 9;
     background-color: #fff;
     margin-top: 850px;
     box-shadow: 0px -3px 10px rgba(51, 51, 51, 0.372);
 }
+.allProjectsCon nav { padding-top: 30px; }
 
 .projectHero a { width: 150px; margin: 0 auto; }
 
@@ -59,17 +58,19 @@ footer { width: 100%; display: flex; justify-content: center; }
 
 /* PROJECT 1 LIFE SQUARED */
 
+#life-squared-hero { background: url("../images/header-life-squared.jpg") no-repeat center center fixed; background-size: cover;}
+
 .projectCase { 
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 20px;
     text-align: center;
- }
+}
 
 .projectCase p { width: 90%; margin: 0 auto; margin-top: 20px; text-align: justify; font-size: 14px; color: #777; }
 
-.od-imgCon { width: 90%; height: 300px; background-color: coral; margin: 0 auto;  margin-top: 20px;}
+.od-imgCon { width: 90%; height: 300px; margin: 0 auto;  margin-top: 20px;}
 
 #od-img1 { background: url('../images/od-mockup-4.jpg') no-repeat center center; background-size: cover; height: 100%; }
 
@@ -78,13 +79,29 @@ footer { width: 100%; display: flex; justify-content: center; }
 .smAdCon { margin: 0 auto; margin-top: 10px; width: 90%; display: grid; justify-items: center; grid-template-columns: repeat(1, 1fr)}
 .smAdCon iframe { border: 0; height: 500px; margin-top: 20px;}
 
-.od-mockups { width: 90%; margin: 0 auto; margin-top: 30px; display: grid; grid-template-columns: repeat(1, 1fr);}
-.od-mockup { width: 100%; height: 400px;}
+.mockupsImgCon { width: 90%; margin: 0 auto; margin-top: 30px; display: grid; grid-template-columns: repeat(1, 1fr);}
+.mockupImg { width: 100%; height: 400px;}
 #od-mockup1 { background: url('../images/od-mockup-1.jpg') no-repeat center center; background-size: cover;}
 #od-mockup2 { background: url('../images/od-mockup-2.jpg') no-repeat center center; background-size: cover;}
 #od-mockup3 { background: url('../images/od-mockup-3.jpg') no-repeat center center; background-size: cover;}
 #od-mockup4 { background: url('../images/od-mockup-5.jpg') no-repeat center center; background-size: cover;}
 
+/* WINE X BEATLES */
+#winexbeatles-hero { background: url("../images/header-winexbeatles.jpg") no-repeat center center fixed; background-size: cover;}
+
+.bxw-imgCon { width: 90%; height: 300px; margin: 0 auto;  margin-top: 20px;}
+
+#bxw-img1 { background: url('../images/magazine-ad.jpg') no-repeat center center; background-size: cover; height: 100%; }
+
+#wine-label-1, #wine-label-2, #bottle-model { height: 100%; margin-top: 40px;}
+
+.hugeX { width: 100%; }
+.hugeX p { text-align: center; font-size: 40px;}
+
+#bxw-mockup1 { background: url('../images/bxw-mockup-1.jpg') no-repeat center center; background-size: cover;}
+#bxw-mockup2 { background: url('../images/bxw-mockup-2.jpg') no-repeat center center; background-size: cover;}
+#bxw-mockup3 { background: url('../images/bxw-mockup-4.jpg') no-repeat center center; background-size: cover;}
+#bxw-mockup4 { background: url('../images/bxw-mockup-3.jpg') no-repeat center center; background-size: cover;}
 
 /* MEDIA QUERIES */
 
@@ -96,21 +113,31 @@ footer { width: 100%; display: flex; justify-content: center; }
     .nextButton img, .prevButton img { width: 20px; padding: 10px;}
 
     .smAdCon { grid-template-columns: repeat(2, 1fr); }
-    .od-imgCon { height: 500px; }
+    .od-imgCon, .bxw-imgCon { height: 500px; }
+    #bottle-model  { height: 500px; width: 390px;}
+
 }
 
 @media screen and (min-width: 1000px) {
     .nextButton a { margin-right: 40px; }
     .prevButton a { margin-left: 40px; }
 
-    .od-mockups { grid-template-columns: repeat(2, 1fr); width: 70%;}
-    .projectCase p, .od-imgCon, .smAdCon { width: 70%; font-size: 18px; margin-top: 40px;}
+    .mockupsImgCon { grid-template-columns: repeat(2, 1fr); width: 70%;}
+    #bxw-mockup3 { background: url('../images/bxw-mockup-3.jpg') no-repeat center center; background-size: cover;}
+    #bxw-mockup4 { background: url('../images/bxw-mockup-4.jpg') no-repeat center center; background-size: cover;}
+
+    .projectCase p, .od-imgCon, .smAdCon, .bxw-imgCon { width: 70%; font-size: 18px; margin-top: 40px;}
     .verticleLine { margin-top: 40px; }
+
+    .hugeX p { font-size: 40px; margin-bottom: 40px;}
+
+    .TIFFcon { display: flex; width: 70%; margin: 0 auto; justify-content: space-between; height: 500px; margin-bottom: 40px; }
+    .TIFFcon p { margin-right: 40px; max-width: 350px; margin-top: 200px; line-height: 40px; }
 }
 
 @media screen and (min-width: 1200px) {
     .nextButton img, .prevButton img { width: 30px; }
 
     .smAdCon { display: flex; justify-content: space-between;}
-    .od-imgCon { height: 800px; }
+    .od-imgCon, .bxw-imgCon { height: 800px; }
 }

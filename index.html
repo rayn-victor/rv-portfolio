@@ -6,30 +6,83 @@
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display|Staatliches&display=swap" rel="stylesheet">
     <link  rel="stylesheet" href="css/reset.css">
     <link  rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/ScrollToPlugin.min.js"></script>
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
     <title>Rayn Victor</title>
 </head>
 <body>
-    <video autoplay muted loop id="bg-video">
-        <source src="images/bg-home.mp4" type="video/mp4">
-    </video>
-    <div id="borderCon"></div>
-    <section class="mainCon">
-        <section id="heroCon">
-            <div class="heroText">
-                <h1>RAYN VICTOR</h1>
-                <p></p>
+    <main class="mainCon">    
+        <section class="page" id="homePage">
+            <div id="borderCon">
+                <div class="homeHeroCon">
+                    <section class="words">
+                        <div id="row1"><p>S</p><p>C</p><p>I</p><p>H</p><p>P</p><p>A</p><p>R</p><p>G</p><p>O</p><p>F</p><p>N</p><p>I</p><p>U</p><p>I</p><p>U</p><p>X</p><p>F</p><p>W</p><p>T</p><p>J</p></div> 
+                        <div id="row2"><p>M</p><p>O</p><p>T</p><p>I</p><p>O</p><p>N</p><p>A</p><p>B</p><p>I</p><p>L</p><p>L</p><p>U</p><p>S</p><p>T</p><p>R</p><p>A</p><p>T</p><p>O</p><p>R</p><p>A</p></div> 
+                        <div id="row3"><p>Y</p><p>S</p><p>O</p><p>C</p><p>I</p><p>A</p><p>L</p><p>M</p><p>E</p><p>D</p><p>I</p><p>A</p><p>G</p><p>L</p><p>O</p><p>G</p><p>O</p><p>R</p><p>N</p><p>V</p></div> 
+                        <div id="row4"><p>C</p><p>O</p><p>N</p><p>T</p><p>E</p><p>N</p><p>T</p><p>C</p><p>R</p><p>E</p><p>A</p><p>T</p><p>I</p><p>O</p><p>N</p><p>I</p><p>E</p><p>D</p><p>G</p><p>A</p></div> 
+                        <div id="row5"><p>T</p><p>N</p><p>E</p><p>H</p><p>O</p><p>M</p><p>E</p><p>L</p><p>A</p><p>N</p><p>D</p><p>E</p><p>R</p><p>O</p><p>L</p><p>T</p><p>B</p><p>P</p><p>I</p><p>S</p></div> 
+                        <div id="row6"><p>M</p><p>I</p><p>C</p><p>R</p><p>O</p><p>S</p><p>O</p><p>F</p><p>T</p><p>S</p><p>U</p><p>I</p><p>T</p><p>E</p><p>S</p><p>H</p><p>O</p><p>R</p><p>S</p><p>C</p></div>
+                        <div id="row7"><p>B</p><p>K</p><p>A</p><p>N</p><p>I</p><p>M</p><p>A</p><p>T</p><p>I</p><p>O</p><p>N</p><p>D</p><p>C</p><p>O</p><p>X</p><p>U</p><p>D</p><p>E</p><p>E</p><p>R</p></div> 
+                        <div id="row8"><p>A</p><p>F</p><p>T</p><p>E</p><p>R</p><p>E</p><p>F</p><p>F</p><p>E</p><p>C</p><p>T</p><p>S</p><p>P</p><p>S</p><p>G</p><p>B</p><p>A</p><p>S</p><p>D</p><p>I</p></div> 
+                        <div id="row9"><p>G</p><p>R</p><p>E</p><p>E</p><p>N</p><p>S</p><p>O</p><p>C</p><p>K</p><p>R</p><p>E</p><p>D</p><p>E</p><p>S</p><p>I</p><p>G</p><p>N</p><p>S</p><p>N</p><p>P</p></div> 
+                        <div id="row10"><p>P</p><p>R</p><p>I</p><p>N</p><p>T</p><p>N</p><p>P</p><p>R</p><p>E</p><p>S</p><p>E</p><p>N</p><p>T</p><p>A</p><p>T</p><p>I</p><p>O</p><p>N</p><p>I</p><p>T</p></div>
+                    </section>
+                    <section>
+                        <a href="index.html"><img src="images/logo.svg" id="logo"></a>
+                        <h1 id="pageTitle">PORTFOLIO</h1>
+                        <img src="images/icon-down.svg" id="icon-down">
+                    </section>
+                </div>
             </div>
         </section>
-        <nav class="homeNav">
-            <ul><li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li></ul>
-        </nav>
-    </section>
+
+        <section class="page" id="projectPage">
+            <section class="projectCon">
+                <nav class="mainNav">
+                    <div id="leftNav">
+                        <ul>
+                            <li><h1>RAYN VICTOR</h1></li>
+                            <li><a href="index.html"><img src="images/icon-home.svg" id="icon-home"></a></li>
+                        </ul>
+                    </div>
+                    <ul><div id="rightNav">
+                        <li><a href="contact.html"><img src="images/icon-phone.svg" id="icon-nav"></a></li>
+                        <li><a href="https://www.linkedin.com/in/rayn-victor" target="_blank"><img src="images/icon-linkedin2.svg" id="icon-nav"></a></li>
+                        <li><a href="https://vimeo.com/raynvictor" target="_blank"><img src="images/icon-vimeo2.svg" id="icon-nav"></a></li>
+                        <li><a target="_blank"><img src="images/icon-instagram2.svg" id="icon-nav"></a></li>
+                    </div></ul>
+                </nav>
+                <section class="projectList">
+                    <div id="project1" class="project">
+                        <a href="projects/life-squared.html"><div class="projectDesc">
+                            <h2>Life Squared</h2>
+                            <p>An awareness campaign to promote organ donatation for an advanced research technology.</p>
+                        </div></a>
+                    </div>
+                    <div id="project2" class="project">
+                        <a href="projects/winexbeatles.html"><div class="projectDesc">
+                            <h2>Wine x Beatles</h2>
+                            <p>A mashup between the brand personality of the Beatles and wine.</p>
+                        </div></a>
+                    </div>
+                    <div id="project3" class="project">
+                        <div class="projectDesc">
+                            <h2>Youngest and Only</h2>
+                            <p>Brand and graphic design for London's very own alternative punk band.</p>
+                        </div>
+                    </div>
+                </section>
+                <footer><a href="index.html"><img src="images/icon-up.svg" id="icon-up"></a></footer>
+            </section>
+        </section>
+        
+    </main> 
 
     <!-- <img src="https://unsplash.it/1000/1000?random=" /> -->
-
+    <script src="/js/scripts/ScrollToPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
