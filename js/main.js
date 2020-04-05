@@ -8,12 +8,12 @@
 
         function scrollToTop(e) {
             e.preventDefault();
-            TweenLite.to(window, 0.7, {scrollTo:{y:mainNav}, offsetY:20, autoKill: false});
+            TweenLite.to(window, 0.7, {scrollTo:{y:mainNav}, autoKill: false});
         }
 
         function scrollToNext(e) {
             e.preventDefault();
-            TweenLite.to(window, 1.7, {scrollTo:{y:mainNav}, offsetY:20, autoKill: false});
+            TweenLite.to(window, 1.7, {scrollTo:{y:mainNav}, autoKill: false});
         }
 
         // hero fade to black (credit css tricks)
