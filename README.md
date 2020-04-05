@@ -1,5 +1,4 @@
-# Rayn Victor Portfolio Page
-![logo](https://user-images.githubusercontent.com/43250423/76877572-017c1880-684a-11ea-9e8c-ad30b257acfd.jpg)
+# Rayn Victor Portfolio
 >"apprendre les règles comme un pro pour pouvoir les enfreindre comme un artiste" - Pablo Picasso
 
 ### Description
@@ -17,6 +16,8 @@ https://github.com/rayn-victor/rv-portfolio.git
 - CSS3
 - Javascript
 - Greensock
+- PHP
+- JQUERY
 
 ### Author
 Rayn Victor
